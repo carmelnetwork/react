@@ -1,27 +1,24 @@
-{
+{ 
+    "ts-node": { "esm": true },
     "compilerOptions": {
+      "allowImportingTsExtensions": true,
+      "baseUrl": ".",
+      "target": "ES2022",
       "lib": ["dom", "dom.iterable", "esnext"],
       "allowJs": true,
       "skipLibCheck": true,
       "strict": true,
+      "forceConsistentCasingInFileNames": true,
       "noEmit": true,
       "esModuleInterop": true,
-      "module": "esnext",
-      "moduleResolution": "bundler",
+      "module": "NodeNext",
+      "verbatimModuleSyntax": true,
+      "moduleResolution": "NodeNext",
       "resolveJsonModule": true,
       "isolatedModules": true,
       "jsx": "preserve",
-      "incremental": true,
-      "plugins": [
-        {
-          "name": "next"
-        }
-      ],
-      "paths": {
-        "@/*": ["./src/*"]
-      }
+      "incremental": true
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "include": ["types/*.d.ts", "**/*.mts", "**/*.ts"],
     "exclude": ["node_modules"]
   }
-  
